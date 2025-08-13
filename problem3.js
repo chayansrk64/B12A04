@@ -1,21 +1,4 @@
-function totalFine( fare ) {
-     if(typeof fare === 'number' && fare > 0 ){
-        const fine = fare + (fare * 20 / 100) + 30
-        return fine;
-    }else {
-        return "Invalid"
-    }
-}
-
-
-function onlyCharacter( str ) {
-    if(typeof str === 'string'){
-        let cap = str.trim().split(' ').join('').toUpperCase()
-        return cap;
-    }else{
-        return "Invalid"
-    }
-}
+// Problem-03 : FIFA Best Team Award 
 
 function bestTeam( player1, player2 ) {
     if(typeof player1 === 'object' && typeof player2 === 'object'){
@@ -32,3 +15,10 @@ function bestTeam( player1, player2 ) {
         return "Invalid"
     }  
 }
+
+
+const obj1 = { name: "Brazil", foul: 5, cardY: 1, cardR: 0 }
+const obj2 = { name: "Argentina", foul: 7, cardY: 0, cardR: 0 }
+
+console.log(bestTeam(obj1, obj2))
+
