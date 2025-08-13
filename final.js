@@ -7,3 +7,11 @@ function totalFine(fare){
     }
 }
 
+function onlyCharacter(str){
+    if(typeof str === 'string'){
+        let cap = str.trim().split(' ').join('').toUpperCase()
+        return cap;
+    }else{
+        return "Invalid"
+    }
+}
