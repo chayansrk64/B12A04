@@ -48,3 +48,24 @@ function isSame(arr1 , arr2 ) {
             return "Invalid"
         }
 }
+
+function resultReport( marks ) {
+    if(Array.isArray(marks)){
+        let totalScrore = marks.reduce(function(a, b){return a + b},0)
+        let finalScore = totalScrore > 0 ? Math.round(totalScrore / marks.length) : 0;
+         
+    let passedSub = []
+    let failedSub = []
+    for(let mark of marks){
+        mark >= 40 ? passedSub.push(mark) : failedSub.push(mark);
+    }
+    
+    let pass = passedSub.length
+    let fail = failedSub.length
+    
+    return {finalScore: finalScore, pass: pass, fail: fail}
+ 
+    } else {
+        return "Invalid"
+    }   
+}
