@@ -10,8 +10,8 @@ function totalFine( fare ) {
 
 function onlyCharacter( str ) {
     if(typeof str === 'string'){
-        let cap = str.trim().split(' ').join('').toUpperCase()
-        return cap;
+        let upperCase = str.trim().split(' ').join('').toUpperCase()
+        return upperCase;
     }else{
         return "Invalid"
     }
